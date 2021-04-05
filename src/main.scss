@@ -31,7 +31,7 @@ a {
   @include transition(all .2s ease-in-out);
 }
 
-.last-modified {
+.language {
   position: absolute;
   top: 30px;
   left: 50%;
@@ -78,6 +78,10 @@ a {
   }
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .content-hd {
   width: 100%;
   padding: 30px 50px;
@@ -112,10 +116,13 @@ a {
   }
   .name {
     float: left;
+    .logo {
+      height: 1.8em;
+    }
     h1 {
       font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", $font-family;
       font-weight: 500;
-      letter-spacing: 5px;
+      letter-spacing: 0px;
       @media screen and (max-width: 720px) {
         letter-spacing: 0;
         line-height: 1.25;
@@ -279,6 +286,7 @@ a {
     position: relative;
     padding: 10px 0 5px;
     line-height: 20px;
+    margin-top: 10px;
     overflow: hidden;
     font-weight: 500;
     min-height: 30px;
@@ -308,7 +316,6 @@ a {
   }
   .section-content {
     text-align: justify;
-    word-break: break-all;
     line-height: 22px;
     em {
       display: inline-block;
