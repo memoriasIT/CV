@@ -1,0 +1,17 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* // Main theme - not dark mode */
+@layer base {
+  :root {
+    --color-text-base: #123412;
+    --color-text-muted: ;
+    --color-text-inverted: ;
+    --color-fill: ;
+    --color-button-accent: ;
+    --color-button-accent-hover: ;
+    --color-button-muted: ;
+
+  }
+}

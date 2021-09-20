@@ -1,5 +1,10 @@
+
+
 @import "../node_modules/compass-mixins/lib/compass/reset";
 @import "../node_modules/compass-mixins/lib/compass/css3";
+
+
+
 
 $color-gray: #d1d1d1;
 $color-green: #00b38a;
@@ -23,10 +28,15 @@ body {
   @media screen and (max-width: 1024px) {
     padding-top: 0;
   }
+
+  @media print {
+    background-color: white;
+  }
 }
 
 a {
   text-decoration: none;
+  padding: 5px;
   color: $color-green;
   @include transition(all .2s ease-in-out);
 }
@@ -145,11 +155,13 @@ a {
   .job {
     float: right;
     text-align: right;
+    line-height: 0.9;
     @media screen and (max-width: 720px) {
       text-align: center;
     }
     h2 {
       display: inline-block;
+      font-weight: 550;
       font-size: 24px;
       @media screen and (max-width: 720px) {
         border-top: 1px solid darken($color-green, 2%);
@@ -157,6 +169,15 @@ a {
         padding: 10px;
       }
     }
+    h3 {
+      display: inline-block;
+      font-size: 18px;
+      @media screen and (max-width: 720px) {
+        margin: 5px auto 0;
+        padding: 0px;
+      }
+    }
+
   }
   .info {
     float: left;
@@ -214,6 +235,11 @@ a {
   @media screen and (max-width: 720px) {
     padding: 20px 20px 50px;
   }
+
+  @media print {
+    padding: 0;
+  }
+
   .content-left,
   .content-right {
     width: 50%;
@@ -293,7 +319,7 @@ a {
     .item-time {
       display: inline-block;
       float: left;
-      width: 25%;
+      width: 40%;
       @media screen and (max-width: 720px) {
         width: 100%;
         margin-bottom: 5px;
